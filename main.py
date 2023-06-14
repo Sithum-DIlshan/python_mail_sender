@@ -8,7 +8,7 @@ from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-from dbconnect import insertData
+# from dbconnect import insertData
 import ssl
 import smtplib
 import pytracking
@@ -96,7 +96,7 @@ def finalize_mailsend(file: UploadFile, message: str, email: str):
     with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as smtp:
         smtp.login(email_sender, email_password)
         smtp.sendmail(email_sender, email, em.as_string())
-        insertData(email_sender, email)
+        # insertData(email_sender, email)
 
 
 @app.post("/my-first-api")
