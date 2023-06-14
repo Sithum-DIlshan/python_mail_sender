@@ -108,7 +108,7 @@ def sendmail(email: str, message: str, file: UploadFile):
     return {"filename": file.filename}
 
 
-@app.get("/get-email-reciept")
+@app.get("/")
 def emailgather():
     print("hello")
     return {"Hello"}
