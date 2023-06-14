@@ -9,12 +9,12 @@ load_dotenv()
 # Obtain connection string information from the portal
 
 config = {
-    "host": os.getenv("MYSQL_HOST"),
-    "user": os.getenv("USER"),
-    "password": os.getenv("PASSWORD"),
-    "database": os.getenv("DATABASE"),
+    "host": "ipulsedb.mysql.database.azure.com",
+    "user": "master",
+    "password": "insurePULSE$",
+    "database": "email_data",
     "client_flags": [mysql.connector.ClientFlag.SSL],
-    "ssl_ca": os.getenv("KEY_FILE"),
+    "ssl_ca": "DigiCertGlobalRootG2.crt.pem",
 }
 
 # Construct connection string
